@@ -1,0 +1,81 @@
+#video-background {
+    position: fixed; /* Lo fija en el fondo */
+    top: 0;
+    left: 0;
+    min-width: 100%; /* Asegura que el video cubra toda la pantalla */
+    min-height: 100%;
+    z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+/* Estilo del texto principal */
+h1 {
+    color: #ffffff; /* Color del texto */
+    font-size: 50px;
+    margin-top: 0;
+    text-align: center;
+    font-weight: bold;
+    /* Texto blanco con borde negro */
+    text-shadow:
+        2px 2px 0px black,    /* sombra a la derecha y abajo */
+        -2px -2px 0px black,  /* sombra a la izquierda y arriba */
+        2px -2px 0px black,   /* sombra a la derecha y arriba */
+        -2px 2px 0px black;   /* sombra a la izquierda y abajo */
+}
+
+/* Estilo de los encabezados h2 */
+h2 {
+    font-size: 40px;
+    color: #ffffff; /* Color del texto blanco */
+    text-align: center;
+    margin: 20px;
+    /* Borde negro alrededor del texto */
+    text-shadow:
+        1px 1px 0px black,
+        -1px -1px 0px black,
+        1px -1px 0px black,
+        -1px 1px 0px black;
+}
+
+/* Estilo de los contenedores con fondo semi-transparente */
+.city {
+    background-color: rgba(255, 255, 255, 0.7);  /* Fondo blanco semi-transparente */
+    color: #6D6D6D;
+    border: 2px solid #56091f; /* Borde del contenedor */
+    margin: 60px;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+/* Personalización de los links y la imagen */
+.logo {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
+}
+
+/* Asegurarse de que el fondo de la página no interfiera con el video */
+body {
+    background-color: transparent;
+    margin: 0;
+}
+
+/* Estilo de la imagen dentro del contenido */
+.content-img {
+    width: 200px;
+    height: 200px;
+    display: block; /* Esto es necesario para aplicar margin auto */
+    margin: 20px auto; /* Centra la imagen */
+}
+
+/* Asegurarse que todas las imágenes estén centradas */
+img {
+    display: block; /* Asegura que todas las imágenes se comporten como bloques */
+    margin-left: auto; /* Centra las imágenes horizontalmente */
+    margin-right: auto; /* Centra las imágenes horizontalmente */
+}
+
+/* Cursor personalizado */
+* {
+    cursor: url(https://ani.cursors-4u.net/games/gam-16/gam1564.cur), auto !important;
+}
