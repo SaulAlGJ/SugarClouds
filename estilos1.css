@@ -1,4 +1,4 @@
-/* Estilos básicos */
+/* Video de fondo */
 #video-background {
     position: fixed;
     top: 0;
@@ -9,9 +9,10 @@
     z-index: -1;
 }
 
+/* Títulos */
 h1 {
     color: #ffffff;
-    font-size: 50px;
+    font-size: 5vw;  /* Uso de unidades relativas */
     margin-top: 0;
     text-align: center;
     font-weight: bold;
@@ -19,40 +20,99 @@ h1 {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 4vw;  /* Uso de unidades relativas */
     color: #ffffff;
     text-align: center;
     margin: 20px;
     text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black;
 }
 
+/* Estilo del contenido dentro de los divs */
 .city {
     background-color: rgba(255, 255, 255, 0.8);
     color: #333;
     border: 2px solid #56091f;
-    margin: 60px;
-    padding: 40px;
+    margin: 5vw;
+    padding: 5vw;
     border-radius: 15px;
+    box-sizing: border-box;
+    max-width: 100%; /* Asegura que el contenido no se expanda más allá de su contenedor */
+    width: auto;
 }
 
+/* Logo */
 .logo {
-    width: 300px;
+    width: 30vw; /* Relativo al tamaño de la pantalla */
     height: auto;
     display: block;
     margin: 0 auto;
+    max-width: 300px; /* Máximo ancho del logo */
 }
 
-.content-img {
-    width: 200px;  /* Ajusta el tamaño según lo que necesites */
-    height: 200px;
-    display: block;
-    margin: 20px auto; /* Centra la imagen */
-}
-
-/* Reducir tamaño de la imagen de Visión */
-.imagen-vision {
-    width: 80%;  /* Cambia el porcentaje según el tamaño que prefieras */
+/* Imágenes de contenido */
+.content-img, .imagen-vision {
+    width: 100%; /* Asegura que las imágenes no se desborden */
     height: auto;
     display: block;
-    margin: 20px auto; /* Centrar la imagen */
+    margin: 20px auto;
+    max-width: 600px; /* Limita el tamaño máximo de las imágenes */
+}
+
+/* Media Queries para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 8vw;  /* Ajusta el tamaño del título para pantallas más pequeñas */
+    }
+
+    h2 {
+        font-size: 5vw;  /* Ajusta el tamaño del subtítulo */
+    }
+
+    .city {
+        margin: 10px;
+        padding: 5vw;
+        width: auto;
+    }
+
+    .logo {
+        width: 50vw; /* Aumenta el tamaño del logo en pantallas más pequeñas */
+    }
+
+    .content-img {
+        width: 80%; /* Ajusta el tamaño de las imágenes */
+    }
+
+    .imagen-vision {
+        width: 90%;
+    }
+}
+
+/* Media Queries para pantallas más grandes (por ejemplo, tabletas) */
+@media (min-width: 769px) {
+    h1 {
+        font-size: 3rem; /* Tamaño fijo para pantallas grandes */
+    }
+
+    h2 {
+        font-size: 2rem;  /* Tamaño fijo para subtítulos */
+    }
+
+    .city {
+        margin: 2rem;
+        padding: 2rem;
+        max-width: 1200px; /* Limita el ancho máximo de los contenedores */
+        width: 100%;
+    }
+
+    .logo {
+        width: 20vw;
+    }
+
+    .content-img {
+        width: 70%; /* Ajusta las imágenes */
+    }
+
+    .imagen-vision {
+        width: 70%;
+    }
 }
